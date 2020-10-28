@@ -2,7 +2,7 @@
 
 This repo is new, additional documentation will follow as the contents are tested and the playbooks are matured. These playbooks are used for automating tasks related to Cribl Logstream.
 
-##Playbooks
+## Playbooks
 
 - Install Cribl Demo
   - Use this to spin up a cribl Demo Environment
