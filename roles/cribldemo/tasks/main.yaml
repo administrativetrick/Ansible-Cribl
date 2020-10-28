@@ -1,0 +1,15 @@
+---
+
+name: Docker Install 
+  hosts: cribldemo
+  user: ansible
+  become: yes
+  tasks:
+    - name: Checkout of Cribl Demo from github
+      git:
+        repo: "https://github.com/criblio/cribl-demo.git"
+        dest: /srv/cribldemo
+    - name: This command will run docker up on the cribl demo container
+      command: docker-compose up -d
+      args:
+        chdir: /srv/cribldemo

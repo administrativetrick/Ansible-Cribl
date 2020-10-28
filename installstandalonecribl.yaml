@@ -1,0 +1,6 @@
+---
+
+- name: Install Cribl
+  hosts: cribl
+  roles:
+    - criblbase

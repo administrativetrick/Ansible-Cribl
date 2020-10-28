@@ -1,0 +1,7 @@
+---
+
+- name: Install Cribl Demo
+  hosts: cribl
+  roles:
+    - dockerbase
+    - cribldemo
