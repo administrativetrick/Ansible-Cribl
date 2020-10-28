@@ -16,3 +16,4 @@ This repo is new, additional documentation will follow as the contents are teste
 - [ ] Add support for different Operating Systeams
 - [ ] Create role to install Docker Compose
 - [ ] Create a sample Ansible hosts file
+- [ ] Document necessary environment variables for playbooks
