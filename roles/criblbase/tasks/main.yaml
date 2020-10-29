@@ -9,8 +9,8 @@
         path: /opt/cribl
         state: directory
     - name: Download Sources
-      unarchive:
-        src: "{{ src }}"
+      command: 
+        cmd: VERSION=$(curl -s https://cdn.cribl.io/versions.json | grep -oP "version\"\s*:\"\K[^\"]+") curl -Ls https://cdn.cribl.io/dl/$(echo ${VERSION} | cut -d '-' -f 1)/cribl-${VERSION}-linux-x64.tgz | tar zxvf -
         dest: "/opt/"
         mode: 0755
         remote_src: yes

@@ -1,6 +1,6 @@
 ---
 
-name: Docker Install 
+name: Cribl Demo Install
   hosts: cribldemo
   user: ansible
   become: yes
