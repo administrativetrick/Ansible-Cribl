@@ -1,18 +1,13 @@
 ---
 
-- name: Install Cribl
-  hosts: cribl
-  become: true
-  tasks:
-    - name: Create /opt/cribl
-      file:
-        path: /opt/cribl
-        state: directory
-    - name: Download Sources
-      command: 
-        cmd: VERSION=$(curl -s https://cdn.cribl.io/versions.json | grep -oP "version\"\s*:\"\K[^\"]+") curl -Ls https://cdn.cribl.io/dl/$(echo ${VERSION} | cut -d '-' -f 1)/cribl-${VERSION}-linux-x64.tgz | tar zxvf -
-        creates: /opt/cribl/bin/cribl
-    - name: Start Cribl
-      command: 
-        cmd: /opt/cribl/bin/cribl start
-        
+- name: cribl
+  file:
+    path: /opt/cribl
+    state: directory
+- name: Download Sources
+  command:
+    cmd: VERSION=$(curl -s https://cdn.cribl.io/versions.json | grep -oP "version\"\s*:\"\K[^\"]+") curl -Ls https://cdn.cribl.io/dl/$(echo ${VERSION} | cut -d '-' -f 1)/cribl-${VERSION}-linux-x64.tgz | tar zxvf -
+    creates: /opt/cribl/bin/cribl
+- name: Start Cribl
+  command:
+    cmd: /opt/cribl/bin/cribl start
