@@ -12,6 +12,7 @@ This repo is new, additional documentation will follow as the contents are teste
 ## To-Do
 
 - [x] Create Role to Install Docker
+- [ ] Change installstandalonecribl playbook to use one liner install for most recent Cribl version. 
 - [ ] Test initial playbooks
 - [ ] Add support for different Operating Systeams
 - [ ] Create role to install Docker Compose
