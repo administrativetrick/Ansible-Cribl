@@ -4,7 +4,7 @@
   git:
     repo: "https://github.com/criblio/cribl-demo.git"
     dest: /srv/cribldemo
-- name: This command will run docker up on the cribl demo container
+- name: This command will start a Cribl Demo Container using Docker-Compose
   command: docker-compose up -d
   args:
     chdir: /srv/cribldemo
